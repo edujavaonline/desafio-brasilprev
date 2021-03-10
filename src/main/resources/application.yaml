@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    password: masterkey
+    url: jdbc:mysql://localhost:3306/db_brazilprev?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+    show-sql: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  springfox:
+    documentation:
+      swagger:
+        use-model-v3: false
+
+
+
