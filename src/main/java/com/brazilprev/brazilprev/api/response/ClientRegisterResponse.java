@@ -8,8 +8,8 @@ import java.time.LocalDate;
 @Data
 public class ClientRegisterResponse {
 
-    @ApiModelProperty(example = "3b1b54ba-12e0-42c9-b942-a57f85ccf3dd")
-    private String clientId;
+    @ApiModelProperty(example = "1")
+    private Long id;
 
     @ApiModelProperty(example = "Eduardo dos Reis Santos")
     private String name;

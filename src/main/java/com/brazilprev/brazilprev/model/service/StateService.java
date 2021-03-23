@@ -1,8 +1,8 @@
 package com.brazilprev.brazilprev.model.service;
 
-import com.brazilprev.brazilprev.model.domain.State;
+import com.brazilprev.brazilprev.api.response.StateResponse;
+import com.brazilprev.brazilprev.mapper.StateMapper;
 import com.brazilprev.brazilprev.model.repository.StateRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,10 +10,16 @@ import java.util.List;
 @Service
 public class StateService {
 
-    @Autowired
-    private StateRepository stateRepository;
+    private final StateRepository stateRepository;
 
-    public List<State> findAll() {
-        return stateRepository.findAll();
+    private final StateMapper stateMapper;
+
+    public StateService(StateRepository stateRepository, StateMapper stateMapper) {
+        this.stateRepository = stateRepository;
+        this.stateMapper = stateMapper;
+    }
+
+    public List<StateResponse> findAll() {
+        return stateMapper.fromListStateToListStateResponse(stateRepository.findAll());
     }
 }

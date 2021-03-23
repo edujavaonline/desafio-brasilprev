@@ -32,13 +32,15 @@ CREATE TABLE client_register (
     CONSTRAINT fk_client_city FOREIGN KEY (address_id_city) REFERENCES city (id)
 ) engine=InnoDB default charset=utf8;
 
-INSERT INTO state (name) VALUES ('Minas Gerais');
-INSERT INTO state (name) VALUES ('São Paulo');
-INSERT INTO state (name) VALUES ('Ceará');
+INSERT INTO state (name) VALUES
+('Minas Gerais'),
+('São Paulo'),
+('Ceará');
 
-INSERT INTO city (name, state_id) VALUES ('Uberlândia', 1);
-INSERT INTO city (name, state_id) VALUES ('Belo Horizonte', 1);
-INSERT INTO city (name, state_id) VALUES ('São Paulo', 2);
-INSERT INTO city (name, state_id) VALUES ('Campinas', 2);
-INSERT INTO city (name, state_id) VALUES ('Fortaleza', 3);
+INSERT INTO city (name, state_id) VALUES
+('Uberlândia', 1),
+('Belo Horizonte', 1),
+('São Paulo', 2),
+('Campinas', 2),
+('Fortaleza', 3);
 

@@ -1,6 +1,6 @@
-package com.brazilprev.brazilprev.openapi;
+package com.brazilprev.brazilprev.configuration.openapi;
 
-import com.brazilprev.brazilprev.exceptionhandler.ApiError;
+import com.brazilprev.brazilprev.exception.exceptionhandler.ApiError;
 import com.fasterxml.classmate.TypeResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -94,7 +94,7 @@ public class SpringFoxConfig {
                         ref->ref.key(
                                 k->k.qualifiedModelName(
                                         q->q.name("ApiError")
-                                                .namespace("com.brazilprev.brazilprev.exceptionhandler")
+                                                .namespace("com.brazilprev.brazilprev.exception.exceptionhandler")
                                 ))));
     }
 

@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.exceptionhandler;
+package com.brazilprev.brazilprev.exception.exceptionhandler;
 
 import lombok.Getter;
 

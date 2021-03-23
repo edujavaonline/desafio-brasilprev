@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.securityconfig;
+package com.brazilprev.brazilprev.configuration.securityconfig;
 
 import com.brazilprev.brazilprev.model.domain.User;
 import com.brazilprev.brazilprev.model.repository.UserRepository;

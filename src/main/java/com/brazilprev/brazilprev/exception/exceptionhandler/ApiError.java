@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.exceptionhandler;
+package com.brazilprev.brazilprev.exception.exceptionhandler;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

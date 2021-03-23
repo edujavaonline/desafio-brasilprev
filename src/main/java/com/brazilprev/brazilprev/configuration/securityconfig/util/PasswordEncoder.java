@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.securityconfig.util;
+package com.brazilprev.brazilprev.configuration.securityconfig.util;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

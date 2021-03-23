@@ -2,7 +2,7 @@ package com.brazilprev.brazilprev.api.openapi;
 
 import com.brazilprev.brazilprev.api.request.ClientRegisterRequest;
 import com.brazilprev.brazilprev.api.response.ClientRegisterResponse;
-import com.brazilprev.brazilprev.exceptionhandler.ApiError;
+import com.brazilprev.brazilprev.exception.exceptionhandler.ApiError;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

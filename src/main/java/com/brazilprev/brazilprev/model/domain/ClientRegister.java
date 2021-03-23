@@ -8,7 +8,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.UUID;
 
 @Data
 @Entity
@@ -20,18 +19,12 @@ public class ClientRegister {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String clientId;
-
-    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
     private String cpf;
 
     private String gender;
 
-    @Column(nullable = false)
     private LocalDate birthDate;
 
     @Embedded
@@ -53,11 +46,6 @@ public class ClientRegister {
 
     public void inactive() {
         setActive(false);
-    }
-
-    @PrePersist
-    private void generateUUIDToClientId() {
-        setClientId(UUID.randomUUID().toString());
     }
 
 }

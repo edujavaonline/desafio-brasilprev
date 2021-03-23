@@ -2,7 +2,6 @@ package com.brazilprev.brazilprev.api.controller;
 
 import com.brazilprev.brazilprev.api.response.StateResponse;
 import com.brazilprev.brazilprev.mapper.StateMapper;
-import com.brazilprev.brazilprev.model.domain.State;
 import com.brazilprev.brazilprev.model.service.StateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -25,7 +24,6 @@ public class StateController {
     @GetMapping()
     @PreAuthorize("hasAuthority('ROLE_SEARCH_STATE') and #oauth2.hasScope('read')")
     public List<StateResponse> findAll() {
-        List<State> states = stateService.findAll();
-        return stateMapper.fromListStateToListStateResponse(states);
+        return stateService.findAll();
     }
 }

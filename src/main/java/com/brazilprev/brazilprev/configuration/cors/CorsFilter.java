@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.cors;
+package com.brazilprev.brazilprev.configuration.cors;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

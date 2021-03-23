@@ -4,7 +4,6 @@ import com.brazilprev.brazilprev.api.openapi.CityControllerOpenApi;
 import com.brazilprev.brazilprev.api.response.CityResponse;
 import com.brazilprev.brazilprev.api.response.CitySummaryResponse;
 import com.brazilprev.brazilprev.mapper.CityMapper;
-import com.brazilprev.brazilprev.model.domain.City;
 import com.brazilprev.brazilprev.model.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -25,14 +24,12 @@ public class CityController implements CityControllerOpenApi {
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('ROLE_SEARCH_CITY')")
     public CityResponse findById(@PathVariable Long id) {
-        City city = cityService.findById(id);
-        return cityMapper.fromCityToCityResponse(city);
+       return cityService.findOne(id);
     }
 
     @GetMapping()
     @PreAuthorize("hasAuthority('ROLE_SEARCH_CITY')")
     public List<CitySummaryResponse> findAllByState(@RequestParam Long stateId) {
-        List<City> cities = cityService.findByStateId(stateId);
-        return cityMapper.fromListCityToListCitySummaryResponse(cities);
+        return cityService.findByStateId(stateId);
     }
 }

@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.core.modelmapper;
+package com.brazilprev.brazilprev.configuration.modelmapper;
 
 import com.brazilprev.brazilprev.api.response.AddressResponse;
 import com.brazilprev.brazilprev.model.domain.Address;

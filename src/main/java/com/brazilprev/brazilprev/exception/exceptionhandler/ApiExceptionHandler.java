@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.exceptionhandler;
+package com.brazilprev.brazilprev.exception.exceptionhandler;
 
 import com.brazilprev.brazilprev.exception.BusinessException;
 import com.brazilprev.brazilprev.exception.EntityNotFoundException;

@@ -1,4 +1,4 @@
-package com.brazilprev.brazilprev.securityconfig;
+package com.brazilprev.brazilprev.configuration.securityconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
